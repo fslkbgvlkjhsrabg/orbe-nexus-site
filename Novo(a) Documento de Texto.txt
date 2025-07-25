@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Orbe Nexus - O Futuro na Palma da Sua Mão</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    margin: 0; padding: 0;
+  }
+  header {
+    background: #161b22;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #58a6ff;
+  }
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 3rem;
+  }
+  h2 {
+    color: #79c0ff;
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 0.5rem;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    background: #21262d;
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(88, 166, 255, 0.2);
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #8b949e;
+    border-top: 1px solid #30363d;
+  }
+  button {
+    background: #238636;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background: #2ea043;
+  }
+  .subscribe {
+    text-align: center;
+  }
+  input[type="email"] {
+    padding: 0.5rem;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    width: 250px;
+    font-size: 1rem;
+  }
+</style>
+</head>
+<body>
+<header>Orbe Nexus</header>
+<main>
+
+  <section id="team">
+    <h2>Equipe Multidisciplinar</h2>
+    <ul>
+      <li>Programadores de IA top</li>
+      <li>Psicólogos comportamentais</li>
+      <li>Especialistas em redes sociais</li>
+      <li>Hackers éticos</li>
+    </ul>
+  </section>
+
+  <section id="infra">
+    <h2>Infraestrutura Segura</h2>
+    <ul>
+      <li>Servidores criptografados</li>
+      <li>Servidores em nuvem com redundância global</li>
+      <li>QG secreto para desenvolvimento e operações</li>
+    </ul>
+  </section>
+
+  <section id="interface">
+    <h2>Interface Amigável</h2>
+    <p>Design limpo, intuitivo e irresistível para atrair milhões em poucos meses.</p>
+  </section>
+
+  <section id="launch">
+    <h2>Lançamento Beta</h2>
+    <p>Convide influenciadores para usar o Orbe Nexus, garantindo publicidade orgânica e viralidade.</p>
+    <div class="subscribe">
+      <input type="email" id="email" placeholder="Seu melhor e-mail" />
+      <button onclick="subscribe()">Quero ser beta tester</button>
+    </div>
+    <p id="msg" style="margin-top: 1rem;"></p>
+  </section>
+
+  <section id="updates">
+    <h2>Atualizações Constantes</h2>
+    <p>Aprimoramento do algoritmo com machine learning, focado em persuasão ética (ou nem tanto).</p>
+  </section>
+
+</main>
+<footer>
+  &copy; 2025 Orbe Nexus - Todos os direitos reservados (fictício)
+</footer>
+
+<script>
+  function subscribe() {
+    const emailInput = document.getElementById('email');
+    const msg = document.getElementById('msg');
+    const email = emailInput.value.trim();
+
+    if (!email || !email.includes('@')) {
+      msg.style.color = 'tomato';
+      msg.textContent = 'Por favor, insira um e-mail válido.';
+      return;
+    }
+
+    // Simula uma inscrição fictícia (sem backend)
+    msg.style.color = '#58a6ff';
+    msg.textContent = `Obrigado, ${email}! Você está na lista beta (fictícia).`;
+
+    emailInput.value = '';
+  }
+</script>
+</body>
+</html>
